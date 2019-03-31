@@ -1,0 +1,53 @@
+DATA EXFILTRATION
+
+.es(q=categorynum:3, index=potentially_malicious_actions).label('3.Copy data into a USB key.').bars(),
+.es(q=categorynum:4, index=potentially_malicious_actions).label('4.Copy data to a non-company cloud share.').bars(),
+.es(q=categorynum:5, index=potentially_malicious_actions).label('5.Send data to a non-business mail account.').bars(),
+.es(q=categorynum:6, index=potentially_malicious_actions).label('6.Copy data through a remote connection (i.e. Team Viewer).').bars(),
+.es(q=categorynum:21, index=potentially_malicious_actions).label('21.Print document.').bars()
+
+
+DATA ALTERATION	
+
+.es(q=categorynum:11, index=potentially_malicious_actions).label('11.Alter the integrity of company information assets.').bars()
+
+DATA DESTRUCTION	
+
+.es(q=categorynum:10, index=potentially_malicious_actions).label('10.Delete company information assets (i.e. source code)').bars()
+
+
+APT	
+
+.es(q=categorynum:7, index=potentially_malicious_actions).label('7.Install and activate unauthorised bind shell to the workstation.').bars(),
+.es(q=categorynum:8, index=potentially_malicious_actions).label('8.Install and activate unauthorised reverse shell to theworkstation.').bars(),
+.es(q=categorynum:9, index=potentially_malicious_actions).label('9.Install unauthorised OEM product for remote connection (i.e. teamviewer) to the workstation.').bars(),
+.es(q=categorynum:12, index=potentially_malicious_actions).label('12.Install malware on the workstation.').bars(),
+.es(q=categorynum:14, index=potentially_malicious_actions).label('14.Turn off the runtime protections of the workstation.').bars()
+
+
+LOGIC BOMB	
+
+.es(q=categorynum:22, index=potentially_malicious_actions).label('22.Modify Task Scheduler.').bars()
+
+
+Anti-Forensics	
+
+.es(q=categorynum:13, index=potentially_malicious_actions).label('13.Install virtualization software on the workstation.').bars(),
+.es(q=categorynum:15, index=potentially_malicious_actions).label('15.Deletion of workstation log files.').bars(),
+.es(q=categorynum:24, index=potentially_malicious_actions).label('24.Access "Media Sharing" internet sites.').bars()
+
+
+Screesaver activation
+
+.es(q=categorynum:25, index=potentially_malicious_actions).label('25.Screen saver during working hours.').bars()
+
+
+Web browsing history
+.es(q=urlgroup:0, index=url).label('Business Related').bars(),
+.es(q=urlgroup:1, index=url).label('Private').bars(),
+.es(q=urlgroup:2, index=url).label('Malicious').bars()
+
+Limited Productivity:
+.es(q=urlgroup:1, index=url).label('Private').bars(),
+.es(q=urlgroup:2, index=url).label('Malicious').bars(),
+.es(q=categorynum:25, index=potentially_malicious_actions).label('25.Screen saver during working hours.').bars()

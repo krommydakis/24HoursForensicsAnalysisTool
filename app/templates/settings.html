@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>24hrs Forensics - Settings</title>
+</head>
+<body>
+    <h1 style="text-align: center">24hrs Forensics - Settings</h1>
+<form method="post">
+        {{ form.hidden_tag() }}
+        <table>
+            <tr><td><b>{{ form.image_path.label }}</b></td><td>{{form.image_path(size=100)}}</td></tr>
+            <tr><td><b>{{ form.suspected_user.label }}</b></td><td>{{form.suspected_user(size=100)}}</td></tr>
+            <tr><td><b>{{ form.classified_folder.label }}</b></td><td>{{form.classified_folder(size=100)}}</td></tr>
+            <tr><td><b>{{ form.es_host.label }}</b></td><td>{{form.es_host(size=100)}}</td></tr>
+            <tr><td><b>{{ form.es_port.label }}</b></td><td>{{form.es_port(size=100)}}</td></tr>
+            <tr><td><b>{{ form.regripper_path.label }}</b></td><td>{{form.regripper_path(size=100)}}</td></tr>
+            <tr><td><b>{{ form.virustotal_api_key.label }}</b></td><td>{{form.virustotal_api_key(size=100)}}</td></tr>
+            <tr><td><b>{{ form.webshrinker_api_key.label }}</b></td><td>{{form.webshrinker_api_key(size=100)}}</td></tr>
+            <tr><td><b>{{ form.webshrinker_api_secret.label }}</b></td><td>{{form.webshrinker_api_secret(size=100)}}</td></tr>
+            <tr><td colspan="2">{{ form.submit() }}</td></tr>
+        </table>
+    </form>
+</body>
+</html>

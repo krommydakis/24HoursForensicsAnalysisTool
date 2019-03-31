@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>24hrs Forensics - Report</title>
+   <!-- import plugin script -->
+   <script src="https://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+   <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+ 
+</head>
+<body>
+    <h1 style="text-align: center">24hrs Forensics - Report</h1>
+    <canvas id="FinalChart" width="350" height="100"></canvas>
+<script>
+var ctx = document.getElementById("FinalChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["A - Data Exfiltration", "B - Data Alteration", "C - Data Destruction", "D - Install APT",
+              "E - Plant Logic Bomb", "F - Use Stolen Credentials", "G - Limited Productivity",
+              "H - Use of Anti - forensics"],
+        datasets: [{
+            label: 'number of occurrences',
+            data: [{% for item in values %}
+                      {{item}},
+                    {% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(123, 123, 123, 0.2)',
+                'rgba(75, 64, 64, 0.2)'
+            ],
+            borderColor: [
+                'red',
+                'blue',
+                'yellow',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+<hr/>
+<h2 style="text-align: center">Details</h2>
+<iframe src="http://localhost:5601/app/kibana#/dashboard/39069d60-5398-11e9-94b5-c3e1262d5987?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-90d%2Cmode%3Aquick%2Cto%3Anow))" height="600" width="100%"></iframe>
+
+
+</body>
+</html>
