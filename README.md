@@ -1,3 +1,5 @@
 # 24HoursForensicsAnalysisTool
-Repository hosting my MSc. Thesis Project 
-(Supervisor: Dr. Eliana Stavrou (UCLan Cyprus), Proposer and Advisor:  Mr. Christos Makedonas (President of ISACA Cyprus Chapter)) 
+This project was created in the context of the Master thesis in the MSc Cybersecurity course at UCLan Cyprus, under the co-supervision of Mr. Christos Makedonas, President of ISACA Cyprus Chapter, and Dr Eliana Stavrou, Course Leader MSc Cybersecurity.
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. ALL RIGHTS RESERVED.
