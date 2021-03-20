@@ -10,7 +10,7 @@ Flask-WTF==0.14.2
 hexdump==3.3
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 libesedb-python==20181229
 MarkupSafe==1.1.1
 more-itertools==6.0.0
